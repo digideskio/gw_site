@@ -41,7 +41,7 @@ GW.home = function() {
     * HANDLE THE LINKS FOR THE APP
     * */
     var handleLinks = function() {
-        $('#gingerWhale a').on('click',function(){
+        $('#gingerWhale').on('click', 'a', function() {
             var $clicked = $(this),
                     navigateTo = $clicked.attr('href').substr(1);
 
