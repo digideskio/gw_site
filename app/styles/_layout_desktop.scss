@@ -1,0 +1,408 @@
+/*
+FOR CUSTOM STUFF
+*/
+
+#siteHeader {
+    h1 {
+        font-size: 16px;
+        font-weight: normal;
+        padding: 0 30px 0 10px;
+    }
+    ul {
+        a {
+            font-size: 16px;
+            padding: 0 20px;
+        }
+    }
+}
+
+#siteFooter {
+    bottom: 2px;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+.water_top {
+    height: 107px;
+}
+
+.page {
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    font-size: 21px;
+    h1 {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    ul {
+        padding-left: 35px;
+    }
+    dd {
+        margin-left: 40px;
+    }
+}
+
+.contentBubble {
+    background: #BBE9FB url(/images/bg_text_bubble.jpg) no-repeat 0 0;
+    border: 4px solid #0679AC;
+    padding: 40px;
+    .closeButton {
+        background: transparent url(/images/sprites_water.png) no-repeat -550px -280px;
+        height: 30px;
+        right: 20px;
+        width: 30px;
+        top: 20px;
+    }
+}
+
+.bubbles {
+    z-index: 420;
+}
+
+.page.notShowing {
+    .bubbles, .contentBubble, nav {
+        display: none;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// ABOUT PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#whale {
+    background: transparent url(/images/sprites.png) no-repeat 0 -589px;
+    height: 214px;
+    width: 304px;
+}
+
+#gingerWhaleText {
+    background: transparent url(/images/sprites.png) no-repeat 0 -808px;
+    display: block;
+    height: 111px;
+    left: 30%;
+    margin: 0 0 0 80px;
+    position: absolute;
+    top: 160px;
+    width: 299px;
+    z-index: 300;
+}
+
+#aboutPage {
+    .contentBubble {
+        top: 250px;
+        width: 50%;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.png) no-repeat -260px 0;
+        height: 172px;
+        margin-left: 230px;
+        top: 110px;
+        width: 230px;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// SUPPORT PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#diver {
+    background: transparent url(/images/sprites.png) no-repeat -300px -244px;
+    bottom: 50px;
+    height: 344px;
+    width: 206px;
+
+    -webkit-animation:      diverMoveDesktop 1.5s ease-in-out 0.25s infinite alternate;
+    //-moz-animation:         diverMoveDesktop 1.5s ease-in-out 0.25s infinite alternate; // mozilla wasn't seeing this.
+    animation:              diverMoveDesktop 1.5s ease-in-out 0.25s infinite alternate;
+}
+
+@-webkit-keyframes diverMoveDesktop {
+    0% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}
+@-moz-keyframes diverMoveDesktop {
+    0% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}
+@keyframes diverMoveDesktop {
+    0% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 60px;
+    }
+}
+
+#supportPage {
+    height: 400px;
+    .contentBubble {
+        bottom: 180px;
+        margin-right: 260px;
+        width: 300px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.png) no-repeat -512px 0;
+        bottom: 230px;
+        height: 230px;
+        margin-right: 120px;
+        width: 172px;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// FRIENDS PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#friendsPage {
+    height: 10px;
+    .contentBubble {
+        bottom: 100px;
+        left: 44%;
+        margin-left: -300px;
+        position: absolute;
+        width: 200px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.png) no-repeat -512px 0;
+        bottom: 120px;
+        height: 230px;
+        left: 44%;
+        margin-left: -50px;
+        position: absolute;
+        width: 172px;
+    }
+}
+
+#bottle {
+    background: transparent url(/images/sprites.png) no-repeat 0 0;
+    bottom: 90px;
+    height: 239px;
+    left: 44%;
+    position: absolute;
+    width: 163px;
+    z-index:50;
+
+    -webkit-animation:      bottleMoveDesktop 1.5s ease-in-out 0.25s infinite alternate;
+    -moz-animation:         bottleMoveDesktop 1.5s ease-in-out 0.25s infinite alternate; // mozilla wasn't seeing this.
+    animation:              bottleMoveDesktop 1.5s ease-in-out 0.25s infinite alternate;
+}
+
+@-webkit-keyframes bottleMoveDesktop {
+    0% {
+        bottom: 90px;
+        left: 44%;
+    }
+    100% {
+        bottom: 92px;
+        left: 44.5%;
+    }
+}
+@-moz-keyframes bottleMoveDesktop {
+    0% {
+        bottom: 90px;
+        left: 44%;
+    }
+    100% {
+        bottom: 92px;
+        left: 44.5%;
+    }
+}
+@keyframes bottleMoveDesktop {
+    0% {
+        bottom: 90px;
+        left: 44%;
+    }
+    100% {
+        bottom: 92px;
+        left: 44.5%;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// STORIES PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#chest {
+    background: transparent url(/images/sprites.png) no-repeat -180px 0;
+    bottom: 32px;
+    height: 235px;
+    left: 25px;
+    width: 307px;
+
+    -webkit-animation:      chestMoveDesktop 2s ease-in-out 0.5s infinite alternate;
+    //-moz-animation:         chestMoveDesktop 2s ease-in-out 0.5s infinite alternate; // mozilla wasn't seeing this
+    animation:              chestMoveDesktop 2s ease-in-out 0.5s infinite alternate;
+}
+
+@-webkit-keyframes chestMoveDesktop {
+    0% {
+        bottom: 32px;
+        left: 25px;
+    }
+    100% {
+        bottom: 28px;
+        left: 28px;
+    }
+}
+@-moz-keyframes chestMoveDesktop {
+    0% {
+        bottom: 32px;
+        left: 25px;
+    }
+    100% {
+        bottom: 28px;
+        left: 28px;
+    }
+}
+@keyframes chestMoveDesktop {
+    0% {
+        bottom: 32px;
+        left: 25px;
+    }
+    100% {
+        bottom: 28px;
+        left: 28px;
+    }
+}
+
+#storiesPage {
+    .contentBubble {
+        bottom: 280px;
+        width: 320px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.png) no-repeat 0 0;
+        bottom: 140px;
+        height: 172px;
+        left: 140px;
+        width: 230px;
+    }
+    header h2 {
+        clear: none;
+    }
+}
+
+// foregrounds
+
+.foreground1 {
+    background: transparent url(/images/foreground1.png) repeat-x 50% 100%;
+    bottom: 50px;
+    height: 556px;
+}
+
+.foreground2 {
+    background: transparent url(/images/foreground2.png) repeat-x 50% 100%;
+    bottom: 0;
+    height: 520px;
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// OTHER SPRITES
+// --------------------------------------------------------------------------------------------------------------------
+
+.bottle {
+    background: transparent url(/images/sprites.png) no-repeat 0 0;
+    bottom: 100px;
+    height: 239px;
+    width: 163px;
+}
+
+.castle {
+    background: transparent url(/images/sprites.png) no-repeat 0 -244px;
+    bottom: 120px;
+    height: 317px;
+    width: 300px;
+}
+
+.corner_left {
+    background: transparent url(/images/sprites_water.png) no-repeat 0 -180px;
+    display: block;
+    height: 309px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 262px;
+    z-index: 5;
+}
+
+.corner_right {
+    background: transparent url(/images/sprites_water.png) no-repeat -256px -180px;
+    display: block;
+    height: 309px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 256px;
+    z-index: 5;
+}
+
+.light1 {
+    background: transparent url(/images/light1.png) no-repeat 0 0;
+    height: 400px;
+    left: 5%;
+    top: 10px;
+    width: 280px;
+}
+
+.light2 {
+    background: transparent url(/images/light1.png) no-repeat 0 0;
+    bottom: 240px;
+    height: 400px;
+    right: 10%;
+    width: 280px;
+}
+
+.leaf1 {
+    background: transparent url(/images/sprites.png) no-repeat -330px -589px;
+    height: 75px;
+    left: 80px;
+    top: 200px;
+    width: 87px;
+}
+
+.leaf2 {
+    background: transparent url(/images/sprites.png) no-repeat -330px -665px;
+    height: 113px;
+    right: 180px;
+    top: 110px;
+    width: 71px;
+}
+
+/* -----------------------------------------------------------------------------------------
+STORIES
+----------------------------------------------------------------------------------------- */
+
+#storyPage {
+    .storyContent {
+        .reviews {
+            .review {
+                float: left;
+                width: 50%;
+            }
+            .item3, .item5 {
+                clear: left;
+            }
+            blockquote {
+                .quoteClose {
+                    display: inline-block;
+                    margin: 4px 0 -4px;
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                }
+            }
+        }
+    }
+}

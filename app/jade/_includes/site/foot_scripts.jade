@@ -1,0 +1,33 @@
+// build:js(app) /scripts/main.js
+script(src='/bower_components/jquery/jquery.js')
+script(src='/bower_components/underscore/underscore.js')
+script(src='/bower_components/backbone/backbone.js')
+script(src='/bower_components/jquery-ui/ui/jquery.ui.core.js')
+script(src='/bower_components/jquery-ui/ui/jquery.ui.widget.js')
+script(src='/bower_components/jquery-ui/ui/jquery.ui.dialog.js')
+script(src='/bower_components/jquery.fitvids/jquery.fitvids.js')
+script(src='/scripts/init.js')
+script(src='/scripts/GW/application.js')
+script(src='/scripts/GW/home.js')
+script(src='/scripts/GW/AppRoutes.js')
+// endbuild
+
+script
+    $(document).ready(function(){
+    GW.application.load();
+    });
+//
+   Asynchronous Google Analytics snippet.
+     mathiasbynens.be/notes/async-analytics-snippet 
+script
+    var _gaq=[['_setAccount','UA-26130348-1'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+//
+   Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+     chromium.org/developers/how-tos/chrome-frame-getting-started 
+//if lt IE 7 
+  script(defer='defer', src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+  script(defer='defer')
+    window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})

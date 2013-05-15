@@ -1,0 +1,13 @@
+{
+  "name": "ginger-whale",
+  "version": "0.0.0",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.9.1",
+    "underscore": "~1.4.4",
+    "backbone": "~1.0.0",
+    "jquery-ui": "~1.10.3",
+    "jquery.fitvids": "~1.0.2"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,130 @@
+!!! 5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title The Sleepy Mole - Ginger Whale
+        include ../../_includes/site/head
+  body#storyPage.sleepy
+    #container
+      header#storyHeader
+        h1#gingerWhaleText.ir The Ginger Whale
+        nav
+          ul
+            li
+              a#whale.ir(href='/') Ginger Whale
+            li
+              a#moreStoriesLink(href='/stories')
+                span.backIcon
+                | More stories
+                span from Ginger Whale
+      article#greebly.storyContent.page
+        header
+          img.icon(src='/images/the-greebley/icon_big.png', alt='The Greebley Greebley')
+          h1 Sleepy Mole's Moving Day
+          a.iStoreLink(href='http://itunes.apple.com/app/sleepy-moles-moving-day/id473172561?ls=1&mt=8')
+            img(src='/images/btn_app_store.png', width='128', height='44', alt='Available in the app store')
+        section.description
+          p
+            strong Can YOU help Sleepy Mole find a place to sleep?
+          p
+            | Choose the path Sleepy Mole takes to find a new home. Along the way, learn about animals that live in underground burrows.
+            | There are eight homes to find, and up to sixteen animals to meet. So each time you read this story it's a new adventure.
+          p
+            | Charmingly illustrated by Melanie Matthews, Sleepy Mole's Moving Day is a bedtime story that educates and nurtures exploration.
+          p Features:
+          ul
+            li choose the path—navigate in 4 directions
+            li help the mole dig—animation between scenes
+            li 8 homes to find, 16 animals to meet, and hundreds of ways to read the story
+          p
+            a(href='http://itunes.apple.com/app/sleepy-moles-moving-day/id473172561?ls=1&mt=8', target='_blank') Available now on the App Store
+          footer
+            nav#socialMenu
+              //
+                 FACEBOOK LIKE SETUP 
+              #fb-root
+              script
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              ul
+                //
+                   FACEBOOK LIKE 
+                li.fb
+                  .fb-like(data-href='http://is.gd/fldQ64', data-send='false', data-layout='button_count', data-width='90', data-show-faces='false', data-font='verdana')
+                //
+                   TWEET 
+                li.tweet
+                  a.twitter-share-button(href='https://twitter.com/share', data-url='http://is.gd/fldQ64', data-count='none', data-via='GingerWhaleApps') Tweet
+                  script(type='text/javascript', src='//platform.twitter.com/widgets.js')
+        section.media
+          .videoContainer
+            iframe(width='560', height='315', src='http://www.youtube.com/embed/2LfIOtzFPgo', frameborder='0', allowfullscreen='allowfullscreen')
+          .thumbsList
+            ul
+              li
+                a.lb_storyPics(href='/images/sleepy-mole/img_1.jpg', title='Sleepy Mole pic 1')
+                  img(src='/images/sleepy-mole/th_1.png', alt='thumbnail 1')
+              li
+                a.lb_storyPics(href='/images/sleepy-mole/img_2.jpg', title='Sleepy Mole pic 2')
+                  img(src='/images/sleepy-mole/th_2.png', alt='thumbnail 2')
+              li
+                a.lb_storyPics(href='/images/sleepy-mole/img_3.jpg', title='Sleepy Mole pic 3')
+                  img(src='/images/sleepy-mole/th_3.png', alt='thumbnail 3')
+              li.last
+                a.lb_storyPics(href='/images/sleepy-mole/img_4.jpg', title='Sleepy Mole pic 4')
+                  img(src='/images/sleepy-mole/th_4.png', alt='thumbnail 4')
+        section.reviews
+          header
+            h3 What others are saying about The Sleepy Mole's Moving Day
+          article.review.item1
+            blockquote
+              | A maze meets an ebook...
+              span.quoteOpen
+              span.quoteClose
+            header
+              a(href='http://childrenstech.com/blog/archives/5774', target='_blank') Children's Tech Review
+          article.review.item2
+            blockquote
+              | ...encourages children to get involved in the action while telling a sweet, uplifting story. This is a must have bedtime tale.
+              span.quoteOpen
+              span.quoteClose
+            header
+              a(href='http://www.padgadget.com/2011/11/21/help-sleepy-mole-and-teddy-find-a-place-to-nap-in-sleepy-moles-moving-day/', target='_blank') Pad Gadget
+          article.review.item3
+            blockquote
+              | I found the graphics to be adorable and the story concept very clever.
+              span.quoteOpen
+              span.quoteClose
+            header
+              a(href='http://www.theiphonemom.com/sleepy-moles-moving-day', target='_blank') The iPhone Mum
+          article.review.item4
+            blockquote
+              | ...the story is different every time…a good pre-bedtime book-app when winding your kids down for the night.
+              span.quoteOpen
+              span.quoteClose
+            header
+              a(href='http://www.appsplayground.com/apps/2011/11/21/sleepy-moles-moving-day-goes-underground-for-ipad/', target='_blank') Apps Playground
+          article.review.item5
+            blockquote
+              | ...4/5 stars. It’s a beautiful ebook, the story is wonderful, the educational opportunities are great…and just a brilliant idea for an ebook.
+              span.quoteOpen
+              span.quoteClose
+            header
+              a(href='http://www.theiphoneappreview.com/2011/11/sleepy-mole%E2%80%99s-moving-day-ipad-app-review/', target='_blank') The iPhone App Review
+      footer#storyFooter
+
+      include ../../_includes/site/foot_scripts

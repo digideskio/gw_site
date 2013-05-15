@@ -1,0 +1,46 @@
+!!! 5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      title Stories - Ginger Whale
+      include ../_includes/site/head 
+  body#storyPage.index
+    #container
+      header#storyHeader
+        h1#gingerWhaleText.ir The Ginger Whale
+        nav
+          ul
+            li
+              a#whale.ir(href='/') Ginger Whale
+      section#storyIndex.storyContent.page
+        h2 The stories so far...
+        ul#storiesList
+          li
+            a.iconLink(href='/stories/the-greebley')
+              img(src='/images/the-greebley/icon.png', alt='The Greebley Greebley')
+            h3
+              a(href='/stories/the-greebley') The Greebley Greebley
+            p A monster story... where YOU make the monster.
+          li
+            a.iconLink(href='/stories/sleepy-mole')
+              img.icon(src='/images/sleepy-mole/icon.png', alt="Sleepy Mole's Moving Day")
+            h3
+              a(href='/stories/sleepy-mole') Sleepy Mole's Moving Day
+            p Can YOU help Sleepy Mole find a place to sleep?
+      footer#storyFooter
+        small
+          | Website concept and design © 2011 James Scanlon Pty. Ltd. This work is copyright. Apart from any use permitted under the Australian Copyright
+          | Act 1968, no part may be reproduced by any process, nor may any other exclusive right be exercised, without the permission of James Scanlon Pty. Ltd. 2011.
+          | A.C.N. 149 327 819. All Rights Reserved. Apple and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service
+          | mark of Apple Inc.
+
+      include ../_includes/site/foot_scripts

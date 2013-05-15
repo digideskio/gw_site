@@ -1,0 +1,18 @@
+.storyIcon {
+    background-color: #ccc;
+    display: block;
+    height: 60px;
+    width: 60px;
+}
+
+.selected .storyIcon {
+    height: 80px;
+    margin-top: -10px;
+    width: 80px;
+}
+
+.iphoneStoreIconLink {
+    background: transparent url(/images/btn_app_store.png) no-repeat 0 0;
+    height: 44px;
+    width: 128px;
+}

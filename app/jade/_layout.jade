@@ -1,0 +1,46 @@
+!!! 5
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+  // <![endif]
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Ginger Whale
+    include _includes/site/head
+  body#gingerWhale.home
+    #container
+      include _includes/site/header
+      #main(role='main')
+        .water_top.goHome
+        #aboutPage.page.goHome.notShowing
+          a#whale(href='/about')
+          #gingerWhaleText.ir Ginger Whale
+          .bubbles
+          section.contentBubble
+            block section_about
+        #supportPage.page.goHome.notShowing
+          a#diver(href='/support')
+          .bubbles
+          section.contentBubble
+            block section_support
+        #friendsPage.page.goHome.notShowing
+          a#bottle(href='/friends')
+          .bubbles
+          section.contentBubble
+            block section_friends
+        #storiesPage.page.goHome.notShowing
+          a#chest(href='/featured-stories')
+          .bubbles
+          section#story_content.contentBubble
+            block section_featured_stories
+          include _includes/site/story_sprites
+        include _includes/site/other_sprites
+      include _includes/site/footer
+ 
+    include _includes/site/foot_scripts

@@ -1,0 +1,126 @@
+@import "compass/css3";
+
+// variables ------------------------
+@import "variables";
+
+// html5 boilerplate start ----------
+@import "html5boilerplate/start";
+
+// custom stuff ---------------------
+@import "mixins"; // my set of mixins that I lean on regularly
+//@import "typography"; // a setup for baseline rhythm etc (in progress)
+//@import "common"; // my own set of regularly used common styles
+@import "layout"; // for the custom stuff for a site
+@import "icons"; // for the icons
+
+// responsive stuff
+@media only screen and (min-width: 480px) {
+    #siteHeader {
+        h1 {
+            padding-right: 15px;
+        }
+        #socialMenu {
+            display: inline;
+            margin-top: 0;
+            width: auto;
+            .fb {
+                width: auto;
+            }
+        }
+    }
+    #diver {
+        right: 10%;
+    }
+    #supportPage {
+        .contentBubble {
+            margin-right: 120px;
+            right: 10%;
+        }
+        .bubbles {
+            margin-right: 55px;
+            right: 10%;
+        }
+    }
+    #moreStoriesLink {
+        right: 20px;
+        width: 210px;
+        span {
+            display: inline;
+        }
+    }
+
+}
+@media only screen and (min-width: 700px) {
+    @import "layout_desktop";
+}
+@media only screen and (min-width: 768px) {
+
+}
+@media only screen and (min-width: 780px) {
+    #storyPage {
+        .storyContent {
+            header {
+                padding-top: 0;
+                h1 {
+                    display: inline;
+                    margin: 0;
+                    padding-right: 0.5em;
+                    vertical-align: middle;
+                }
+                .iStoreLink {
+                    margin-top: 0;
+                }
+            }
+            .description {
+                float: left;
+                padding-right: 5%;
+                width: 45%;
+            }
+            .media {
+                float: left;
+                max-width: auto;
+                padding-right: 5%;
+                padding-top: 4px;
+                width: 45%;
+            }
+            .reviews {
+                .review {
+                    width: 33%;
+                }
+                .item3, .item5 {
+                    clear: none;
+                }
+                .item4 {
+                    clear: left;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (min-width: 1500px) {
+    .bottle {
+        left: 48%;
+    }
+    .castle {
+        left: 32%;
+    }
+}
+
+@import "plugins";
+
+// html5 boilerplate helpers and print
+@import "html5boilerplate/helpers";
+@import "html5boilerplate/print";
+
+// custom print
+@import "print";
+
+// older versions of IE
+
+.oldie {
+    @import "layout_desktop";
+}

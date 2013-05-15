@@ -1,0 +1,59 @@
+/* ------------------------------------------------------ */
+/* TYPOGRAPHY */
+/* ------------------------------------------------------ */
+
+/* TODO (change the defaults)
+1. Set up the base font size in html5 boilerplate start - font normalisation area (set to 13 px by default)
+2. Set up the base font family in html5 boilerplate start - towards the end of the file
+*/
+
+/*
+Use these to help set up baseline rhythm:
+http://drewish.com/tools/vertical-rhythm
+http://topfunky.com/baseline-rhythm-calculator/ (gone?)
+http://pxtoem.com/ is also a useful tool
+*/
+
+/* sans serif for headings and menus etc */
+h1, h2, h3, h4, h5, h6, #mainMenu, .breadcrumbs {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: (28px/$baseSize)*1em;            /* 28px (28/14) */
+	line-height: ($baseLineDouble/28px)*1em;    /* 42px (42/28) */
+	margin: ($baseLine/28px)*1em 0 0;           /* 21px (21/28) */
+}
+h2 {
+    font-size: (22px/$baseSize)*1em;            /* 22px (22/14) */
+    line-height: ($baseLineDouble/22px)*1em;    /* 42px (42/22) */
+    margin: ($baseLine/22px)*1em 0 0;           /* 21px (21/22) */
+}
+h3 {
+	font-size: (20px/$baseSize)*1em;            /* 20px (20/14) */
+	line-height: ($baseLine/20px)*1em;          /* 21px (21/20) */
+	margin: ($baseLine/20px)*1em 0 0;           /* 21px (21/20) */
+}
+h4 {
+	font-size: (18px/$baseSize)*1em;            /* 18px (18/14) */
+	line-height: ($baseLine/18px)*1em;          /* 21px (21/18) */
+	margin: ($baseLine/18px)*1em 0 0;           /* 21px (21/18) */
+}
+h5 {
+	font-size: (16px/$baseSize)*1em;         /* 16px (16/14) */
+	line-height: ($baseLine/16px)*1em;       /* 21px (21/16) */
+	margin: ($baseLine/16px)*1em 0 0;        /* 21px (21/16) */
+}
+h6 {
+	font-size: (14px/$baseSize)*1em;         /* 14px (14/14) */
+	line-height: ($baseLine/14px)*1em;       /* 21px (21/14) */
+	margin: ($baseLine/14px)*1em 0 0;        /* 21px (21/14) */
+}
+.small {
+	font-size: (12px/$baseSize)*1em;         /* 12px (12/14) */
+	line-height: ($baseLine/12px)*1em;       /* 21px (21/12) */
+	margin: ($baseLine/12px)*1em 0 0;        /* 21px (21/12) */
+}
+p {
+    margin: ($baseLine/12px)*1em 0;
+}

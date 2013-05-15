@@ -1,0 +1,825 @@
+/*
+FOR CUSTOM STUFF
+*/
+
+body {
+    background: #34BBD9 url(/images/bg_water1.png) repeat 0 0;
+}
+
+#container {
+    position: relative;
+}
+
+#main {
+    margin-top: 30px;
+    position: relative;
+}
+
+#siteHeader {
+    background-color: #222;
+    border-bottom: 1px solid #111;
+    height: 30px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    @include single-box-shadow(#2173a5, 2px, 2px, 4px, 0, false);
+    h1 {
+        display: inline;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 30px;
+        padding: 0 10px 0 10px;
+        a {
+            color: #444;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #555;
+        }
+    }
+    nav {
+        display: inline;
+        font-size: 12px;
+    }
+    #socialMenu {
+        display: none; // hiding in small devices for now.
+        float: right;
+        margin-top: 40px;
+        width: 50px;
+        z-index: 0;
+        ul {
+            height: 24px;
+            overflow: hidden;
+        }
+        li {
+            display: block;
+            float: right;
+            margin: 5px 8px 0 0;
+            vertical-align: middle;
+        }
+        .fb {
+            font-size: 10px !important;
+            overflow: hidden;
+            text-align: right;
+            width: 40px;
+        }
+    }
+    ul {
+        display: inline;
+        @include horizontalList;
+        a {
+            color: #ccc;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 30px;
+            padding: 0 5px;
+            text-decoration: none;
+        }
+    }
+}
+
+#siteFooter {
+    bottom: 0;
+    color: #fff;
+    font-size: 0.85em;
+    height: 1.2em;
+    left: 0;
+    line-height: 1.1;
+    overflow: hidden;
+    padding: 0 0.5em;
+    position: absolute;
+    right: 0;
+    z-index: 390;
+    a {
+        color: #fff;
+        text-decoration: none;
+        white-space: nowrap;
+        strong {
+            font-weight: normal;
+        }
+    }
+    a:hover {
+        strong {
+            color: #421311;
+        }
+    }
+}
+
+.water_top {
+    background: #86E2F7 url(/images/bg_water_top.png) repeat 0 0;
+    height: 57px;
+}
+
+.page {
+    color: #222;
+    /*font-family: 'Annie Use Your Telescope', sans-serif;*/
+    font-size: 12px;
+    h1 {
+        color: #444;
+        font-family: 'Mountains of Christmas', sans-serif;
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 0 0.5em;
+        text-transform: uppercase;
+    }
+    h2 {
+        color: #444;
+        font-family: 'Mountains of Christmas', sans-serif;
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 0 0.5em;
+        text-transform: uppercase;
+    }
+    h3 {
+        color: #444;
+        font-family: 'Mountains of Christmas', sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 1;
+        margin: 0 0 0.5em;
+    }
+    p {
+        line-height: 1.1;
+        margin: 0 0 0.5em;
+    }
+    ul {
+        line-height: 1.1;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+        padding-left: 20px;
+    }
+    li {
+        margin-bottom: 0.25em;
+    }
+    dl {
+        line-height: 1.1;
+        margin: 0;
+    }
+    dt {
+        margin: 1em 0 0;
+    }
+    dd {
+        margin-left: 15px; /* was 40px */
+    }
+}
+
+.contentBubble {
+    background: #BBE9FB url(/images/bg_text_bubble.mob.jpg) no-repeat 0 0;
+    border: 2px solid #0679AC;
+    padding: 20px;
+    z-index: 400;
+    @include border-radius();
+    @include box-shadow(#51C8F6, 4px, 2px, 8px, 6px, true);
+    .closeButton {
+        background: transparent url(/images/sprites_water.mob.png) no-repeat 0 -90px;
+        display: block;
+        height: 24px;
+        position: absolute;
+        right: 15px;
+        width: 24px;
+        top: 20px;
+    }
+}
+
+.bubbles {
+    z-index: 420;
+}
+
+.page.notShowing {
+    .bubbles, .contentBubble, nav {
+        display: none;
+    }
+}
+
+.loader {
+    background-color: #fff;
+    border: 1px solid #6fd1f7;
+    margin: 0 auto;
+    padding: 2em 0;
+    text-align: center;
+    width: 160px;
+    @include border-radius();
+    img {
+        display:block;
+        margin: 0 auto;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// ABOUT PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#whale, #storyPage #whale {
+    background: transparent url(/images/sprites.mob.png) no-repeat 0 -256px;
+    display: block;
+    height: 93px;
+    left: 30%;
+    position: absolute;
+    top: 10px;
+    width: 133px;
+    z-index: 301;
+
+    -webkit-animation:      whaleSwim 2s ease-in-out 0.5s infinite alternate;
+    -moz-animation:         whaleSwim 2s ease-in-out 0.5s infinite alternate;
+    animation:              whaleSwim 2s ease-in-out 0.5s infinite alternate;
+}
+
+#gingerWhaleText {
+    background: transparent url(/images/sprites.mob.png) no-repeat 0 -350px;
+    display: block;
+    height: 44px;
+    left: 30%;
+    margin: 0 0 0 30px;
+    position: absolute;
+    top: 80px;
+    width: 119px;
+    z-index: 300;
+}
+
+@-webkit-keyframes whaleSwim {
+    0% {
+        left: 30%;
+        top: 10px;
+    }
+    100% {
+        left: 31%;
+        top: 10px;
+    }
+}
+@-moz-keyframes whaleSwim {
+    0% {
+        left: 30%;
+        top: 10px;
+    }
+    100% {
+        left: 31%;
+        top: 10px;
+    }
+}
+@keyframes whaleSwim {
+    0% {
+        left: 30%;
+        top: 10px;
+    }
+    100% {
+        left: 31%;
+        top: 10px;
+    }
+}
+
+#aboutPage {
+    .contentBubble {
+        right: 5%;
+        top: 120px;
+        position: absolute;
+        width: 75%;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.mob.png) no-repeat -109px 0;
+        height: 82px;
+        left: 30%;
+        margin-left: 93px;
+        position: absolute;
+        top: 55px;
+        width: 109px;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// SUPPORT PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#diver {
+    background: transparent url(/images/sprites.mob.png) no-repeat -131px -106px;
+    bottom: 20px;
+    display: block;
+    height: 150px;
+    position: absolute;
+    right: 2%;
+    width: 90px;
+    z-index: 80;
+
+    -webkit-animation:      diverMove 1.5s ease-in-out 0.25s infinite alternate;
+    -moz-animation:         diverMove 1.5s ease-in-out 0.25s infinite alternate;
+    animation:              diverMove 1.5s ease-in-out 0.25s infinite alternate;
+}
+
+@-webkit-keyframes diverMove {
+    0% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 23px;
+    }
+}
+@-moz-keyframes diverMove {
+    0% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 23px;
+    }
+}
+@keyframes diverMove {
+    0% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 23px;
+    }
+}
+
+#supportPage {
+    height: 200px;
+    .contentBubble {
+        bottom: 70px;
+        margin-right: 110px;
+        position: absolute;
+        right: 2%;
+        width: 170px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.mob.png) no-repeat -218px 0;
+        bottom: 100px;
+        height: 109px;
+        margin-right: 45px;
+        position: absolute;
+        right: 2%;
+        width: 82px;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// FRIENDS PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#friendsPage {
+    height: 10px;
+    .contentBubble {
+        bottom: 50px;
+        left: 50%;
+        margin-left: -180px;
+        position: absolute;
+        width: 125px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.mob.png) no-repeat -218px 0;
+        bottom: 70px;
+        height: 109px;
+        left: 50%;
+        margin-left: -30px;
+        position: absolute;
+        width: 82px;
+    }
+}
+
+#bottle {
+    background: transparent url(/images/sprites.mob.png) no-repeat 0 0;
+    bottom: 40px;
+    height: 104px;
+    left: 50%;
+    position: absolute;
+    width: 71px;
+    z-index:50;
+
+    -webkit-animation:      bottleMove 1.5s ease-in-out 0.25s infinite alternate;
+    -moz-animation:         bottleMove 1.5s ease-in-out 0.25s infinite alternate;
+    animation:              bottleMove 1.5s ease-in-out 0.25s infinite alternate;
+}
+
+@-webkit-keyframes bottleMove {
+    0% {
+        bottom: 40px;
+        left: 50%;
+    }
+    100% {
+        bottom: 41px;
+        left: 49.5%;
+    }
+}
+@-moz-keyframes bottleMove {
+    0% {
+        bottom: 40px;
+        left: 50%;
+    }
+    100% {
+        bottom: 41px;
+        left: 49.5%;
+    }
+}
+@keyframes bottleMove {
+    0% {
+        bottom: 40px;
+        left: 50%;
+    }
+    100% {
+        bottom: 41px;
+        left: 49.5%;
+    }
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// STORIES PAGE
+// --------------------------------------------------------------------------------------------------------------------
+
+#chest {
+    background: transparent url(/images/sprites.mob.png) no-repeat -78px 0;
+    bottom: 10px;
+    display: block;
+    height: 102px;
+    left: 10px;
+    position: absolute;
+    width: 134px;
+    z-index: 80;
+
+    -webkit-animation:      chestMove 2s ease-in-out 0.5s infinite alternate;
+    -moz-animation:         chestMove 2s ease-in-out 0.5s infinite alternate;
+    animation:              chestMove 2s ease-in-out 0.5s infinite alternate;
+}
+
+@-webkit-keyframes chestMove {
+    0% {
+        bottom: 10px;
+        left: 10px;
+    }
+    100% {
+        bottom: 12px;
+        left: 6px;
+    }
+}
+@-moz-keyframes chestMove {
+    0% {
+        bottom: 10px;
+        left: 10px;
+    }
+    100% {
+        bottom: 12px;
+        left: 6px;
+    }
+}
+@keyframes chestMove {
+    0% {
+        bottom: 10px;
+        left: 10px;
+    }
+    100% {
+        bottom: 12px;
+        left: 6px;
+    }
+}
+
+#storiesPage {
+    .contentBubble {
+        bottom: 140px;
+        left: 2%;
+        position: absolute;
+        width: 260px;
+    }
+    .bubbles {
+        background: transparent url(/images/sprites_water.mob.png) no-repeat 0 0;
+        bottom: 80px;
+        height: 82px;
+        left: 70px;
+        position: absolute;
+        width: 109px;
+    }
+    header {
+        .storyIcon {
+            float: left;
+            margin: 0 1em 10px 0;
+        }
+        .iphoneStoreIconLink {
+            float: right;
+        }
+        h2 {
+            clear: both;
+        }
+    }
+}
+
+#featuredStoriesList {
+    list-style-type: none;
+    padding: 0;
+    img {
+        margin-right: 0.25em;
+        vertical-align: middle;
+    }
+    a {
+        clear: both;
+        display: block;
+        margin: 0.25em 0;
+        text-decoration: none;
+        strong {
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+    }
+    .moreSoon {
+        margin-top: 1em;
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+// foregrounds
+
+.foreground1 {
+    background: transparent url(/images/foreground1.mob.png) repeat-x 50% 100%;
+    bottom: 25px;
+    height: 216px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index:10;
+}
+
+.foreground2 {
+    background: transparent url(/images/foreground2.mob.png) repeat-x 50% 100%;
+    bottom: 0;
+    height: 217px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index:40;
+}
+
+// --------------------------------------------------------------------------------------------------------------------
+// OTHER SPRITES
+// --------------------------------------------------------------------------------------------------------------------
+
+.castle {
+    background: transparent url(/images/sprites.mob.png) no-repeat 0 -106px;
+    bottom: 60px;
+    height: 138px;
+    left: 21%;
+    position: absolute;
+    width: 130px;
+    z-index: 30;
+}
+
+.corner_left, .corner_right {
+    display: none;
+}
+
+.light1 {
+    background: transparent url(/images/light1.mob.png) no-repeat 0 0;
+    height: 200px;
+    left: 10%;
+    position: absolute;
+    top: 10px;
+    width: 140px;
+}
+
+.light2 {
+    background: transparent url(/images/light1.mob.png) no-repeat 0 0;
+    bottom: 110px;
+    height: 200px;
+    right: 10%;
+    position: absolute;
+    width: 140px;
+}
+
+.leaf1 {
+    background: transparent url(/images/sprites.mob.png) no-repeat -143px -256px;
+    height: 33px;
+    left: 40px;
+    position: absolute;
+    top: 100px;
+    width: 31px;
+    z-index: 40;
+}
+
+.leaf2 {
+    background: transparent url(/images/sprites.mob.png) no-repeat -143px -289px;
+    height: 50px;
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    width: 31px;
+    z-index: 30;
+}
+
+
+/* -----------------------------------------------------------------------------------------
+STORIES
+----------------------------------------------------------------------------------------- */
+
+#storyPage {
+    background: #E6F7FA none;
+    #whale {
+        left: 20px;
+        top: 5px;
+
+        -webkit-animation:      whaleSwimStory 2s ease-in-out 0.5s infinite alternate;
+        -moz-animation:         whaleSwimStory 2s ease-in-out 0.5s infinite alternate;
+        animation:              whaleSwimStory 2s ease-in-out 0.5s infinite alternate;
+    }
+    #gingerWhaleText {
+        background: transparent url(/images/sprites.mob.png) no-repeat 0 -350px;
+        display: block;
+        height: 44px;
+        left: 60px;
+        margin: 0;
+        position: absolute;
+        top: 75px;
+        width: 119px;
+        z-index: 300;
+    }
+    .storyContent {
+        background: #E6F7FA none;
+        max-width: 1200px;
+        overflow: hidden;
+        padding: 2em 1em;
+        header {
+            padding-bottom: 1.5em;
+            padding-top: 1.5em;
+            .icon {
+                float: left;
+                margin: -14px 20px 0 0;
+                vertical-align: middle;
+            }
+            .iStoreLink {
+                display: inline-block;
+                margin-top: 1em;
+            }
+        }
+        .description {
+            strong {
+                color: #000;
+                font-size: 1.2em;
+                font-weight: normal;
+            }
+            ul {
+                margin-bottom: 1em;
+            }
+        }
+        .thumbsList {
+            padding-top: 1em;
+            ul {
+                overflow: hidden;
+                @include horizontalList();
+                li {
+                    display: block;
+                    float: left;
+                    text-align: center;
+                    padding: 0 1%;
+                    width: 23%;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .media {
+            max-width: 600px;
+            padding-top: 2em;
+        }
+        .reviews {
+            clear: both;
+            overflow: hidden;
+            padding: 2em 0 1em;
+            h3 {
+                margin: 0;
+            }
+            .review {
+                padding-bottom: 1.5em;
+                header {
+                    padding: 0;
+                }
+            }
+            blockquote {
+                margin: 0 20px 0 0;
+                padding: 0 28px 0.5em 28px;
+                position: relative;
+                .quoteOpen, .quoteClose {
+                    background: transparent url(/images/sprites.mob.png) no-repeat -180px -277px;
+                    height: 20px;
+                    width: 23px;
+                }
+                .quoteOpen {
+                    display: block;
+                    left: 0;
+                    position: absolute;
+                    top: -3px;
+                }
+                .quoteClose {
+                    background-position: -180px -300px;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: -3px;
+                }
+            }
+        }
+    }
+    #socialMenu {
+        ul {
+            margin: 1em 0 0;
+            overflow: hidden;
+            padding: 0;
+            width: auto;
+        }
+        li {
+            display: block;
+        }
+    }
+}
+
+@-webkit-keyframes whaleSwimStory {
+    0% {
+        left: 20px;
+        top: 5px;
+    }
+    100% {
+        left: 30px;
+        top: 5px;
+    }
+}
+@-moz-keyframes whaleSwimStory {
+    0% {
+        left: 20px;
+        top: 5px;
+    }
+    100% {
+        left: 30px;
+        top: 5px;
+    }
+}
+@keyframes whaleSwimStory {
+    0% {
+        left: 20px;
+        top: 5px;
+    }
+    100% {
+        left: 30px;
+        top: 5px;
+    }
+}
+
+#storyHeader {
+    background: #34BBD9 url(/images/bg_water1.png) repeat 0 0;
+    border-bottom: 2px solid #1c5b68;
+    min-height: 124px;
+    position: relative;
+    h1 {
+        margin: 0;
+    }
+}
+
+#moreStoriesLink {
+    background-color: #fff;
+    display: block;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 30px;
+    width: 110px;
+    @include border-radius(4px);
+    @include single-box-shadow(#1C5B68, 2px, 2px, 4px, 0, false);
+    span {
+        display: none;
+    }
+    .backIcon {
+        background: transparent url(/images/sprites.mob.png) no-repeat -190px -260px;
+        float: left;
+        height: 14px;
+        margin-top: 4px;
+        width: 14px;
+    }
+}
+
+#storyFooter {
+    line-height: 1;
+    max-width: 1200px;
+    padding: 1em;
+}
+
+// For the listing of stories (on the index page)
+
+#storiesList {
+    list-style-type: none;
+    padding: 0.5em 0 0;
+    li {
+        margin: 1.5em 0;
+        padding: 0 0 0 60px;
+        position: relative;
+        a {
+            text-decoration: none;
+        }
+        .iconLink {
+            display: block;
+            height: 48px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 48px;
+        }
+    }
+}
+
