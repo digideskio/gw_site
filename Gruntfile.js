@@ -55,6 +55,10 @@ module.exports = function (grunt) {
                 files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
                 tasks: ['compass:server']
             },
+            jade: {
+                files: ['<%= yeoman.app %>/jade/{,*/}*.jade'],
+                tasks: ['jade']
+            },
             livereload: {
                 options: {
                     livereload: LIVERELOAD_PORT
@@ -78,7 +82,7 @@ module.exports = function (grunt) {
                     middleware: function (connect) {
                         return [
                             mountFolder(connect, '.tmp'),
-                            mountFolder(connect, yeomanConfig.app),
+                            mountFolder(connect, 'app'),
                             lrSnippet
                         ];
                     }

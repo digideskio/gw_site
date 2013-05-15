@@ -1,18 +1,8 @@
-!!! 5
-//if lt IE 7
-  html.no-js.lt-ie9.lt-ie8.lt-ie7
-//if IE 7
-  html.no-js.lt-ie9.lt-ie8
-//if IE 8
-  html.no-js.lt-ie9
-// [if gt IE 8] <!
-html.no-js
-  // <![endif]
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title Ginger Whale
-    include _includes/site/head
+extends _outer
+
+block vars
+
+block body
   body#gingerWhale.home
     #container
       include _includes/site/header
@@ -39,8 +29,19 @@ html.no-js
           .bubbles
           section#story_content.contentBubble
             block section_featured_stories
-          include _includes/site/story_sprites
-        include _includes/site/other_sprites
-      include _includes/site/footer
- 
-    include _includes/site/foot_scripts
+          //- story sprites
+          .foreground1.goHome
+          .foreground2.goHome
+          .castle.goHome
+        //- other sprites
+        .corner_left.goHome
+        .corner_right.goHome
+        .light1.goHome
+        .light2.goHome
+        .leaf1.goHome
+      //- footer
+      footer#siteFooter
+        a.noPush(href='http://www.experiencebureau.com', target='_blank')
+          | Website built by
+          strong Experience Bureau
+          | .
