@@ -5,7 +5,35 @@ block vars
 block body
   body#gingerWhale.home
     #container
-      include _includes/site/header
+      header#siteHeader
+        h1
+          a(href='/') Ginger Whale
+        nav#mainMenu
+          ul
+              li
+                  a.about(href='/about') About
+              li
+                  a.support(href='/support') Support
+              li
+                  a.support(href='/friends') We like
+              li
+                  a.stories(href='/featured-stories') Stories
+        nav#socialMenu
+          #fb-root
+          script
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+          ul
+            li.fb
+              .fb-like(data-href='http://www.gingerwhale.com', data-send='false', data-layout='button_count', data-width='90', data-show-faces='false', data-font='verdana')
+            li.tweet
+              a.twitter-share-button(href='https://twitter.com/share', data-url='http://www.gingerwhale.com', data-count='none', data-via='GingerWhaleApps') Tweet
+              script(type='text/javascript', src='//platform.twitter.com/widgets.js')
       #main(role='main')
         .water_top.goHome
         #aboutPage.page.goHome.notShowing

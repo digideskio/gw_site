@@ -45,6 +45,8 @@ GW.home = function() {
             var $clicked = $(this),
                     navigateTo = $clicked.attr('href').substr(1);
 
+            console.log('clicked a link');
+            
             if (!$clicked.hasClass('noPush')) {
                 if (navigateTo=='TODO') {
                     alert('that\'s not working yet');
