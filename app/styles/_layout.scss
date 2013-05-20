@@ -696,13 +696,14 @@ STORIES
             h3 {
                 margin: 0;
             }
-            .review {
-                padding-bottom: 1.5em;
-                header {
-                    padding: 0;
-                }
+        }
+        .review {
+            padding: 0.25em 0 1.5em;
+            header {
+                padding: 0;
             }
             blockquote {
+                display: inline-block;
                 margin: 0 20px 0 0;
                 padding: 0 28px 0.5em 28px;
                 position: relative;

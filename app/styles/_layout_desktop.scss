@@ -386,23 +386,32 @@ STORIES
 
 #storyPage {
     .storyContent {
-        .reviews {
-            .review {
-                float: left;
-                width: 50%;
-            }
-            .item3, .item5 {
-                clear: left;
-            }
-            blockquote {
-                .quoteClose {
-                    display: inline-block;
-                    margin: 4px 0 -4px;
-                    position: relative;
-                    right: auto;
-                    top: auto;
-                }
+        .reviewsList {
+            @include column-count(2);
+            @include column-gap(3em);
+        }
+        .review {
+            display: inline-block;
+        }
+        .review blockquote {
+            .quoteClose {
+                display: inline-block;
+                margin: 4px 0 -4px;
+                position: relative;
+                right: auto;
+                top: auto;
             }
         }
+    }
+}
+.no-csscolumns {
+    #storyPage .storyContent .reviews {
+        .review {
+            float: left;
+            width: 50%;
+        }
+        .item3, .item5, .item7, .item9, .item11, .item13, .item15 {
+            clear: left;
+        }        
     }
 }

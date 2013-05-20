@@ -53,52 +53,9 @@
 @media only screen and (min-width: 700px) {
     @import "layout_desktop";
 }
-@media only screen and (min-width: 768px) {
 
-}
-@media only screen and (min-width: 780px) {
-    #storyPage {
-        .storyContent {
-            header {
-                padding-top: 0;
-                h1 {
-                    display: inline;
-                    margin: 0;
-                    padding-right: 0.5em;
-                    vertical-align: middle;
-                }
-                .iStoreLink {
-                    margin-top: 0;
-                }
-            }
-            .description {
-                float: left;
-                padding-right: 5%;
-                width: 45%;
-            }
-            .media {
-                float: left;
-                max-width: auto;
-                padding-right: 5%;
-                padding-top: 4px;
-                width: 45%;
-            }
-            .reviews {
-                .review {
-                    width: 33%;
-                }
-                .item3, .item5 {
-                    clear: none;
-                }
-                .item4 {
-                    clear: left;
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) {
+    @import "layout_desktop2";
 }
 
 @media only screen and (min-width: 1500px) {
@@ -124,4 +81,5 @@
 
 .oldie {
     @import "layout_desktop";
+    @import "layout_desktop2";
 }

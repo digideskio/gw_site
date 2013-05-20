@@ -1,0 +1,32 @@
+#storyPage {
+    .storyContent {
+        .reviewsList {
+            @include column-count(3);
+            @include column-gap(3em);
+        }
+        header {
+            padding-top: 0;
+            h1 {
+                display: inline;
+                margin: 0;
+                padding-right: 0.5em;
+                vertical-align: middle;
+            }
+            .iStoreLink {
+                margin-top: 0;
+            }
+        }
+        .description {
+            float: left;
+            padding-right: 5%;
+            width: 45%;
+        }
+        .media {
+            float: left;
+            max-width: auto;
+            padding-right: 5%;
+            padding-top: 4px;
+            width: 45%;
+        }
+    }
+}
