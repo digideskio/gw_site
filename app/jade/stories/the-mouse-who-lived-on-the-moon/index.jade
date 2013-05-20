@@ -1,0 +1,86 @@
+extends ../../_outer
+
+block vars
+    - var title_prefix = 'The Mouse Who Lived On The Moon'
+
+block body
+    body#storyPage.mouse
+    #container
+      header#storyHeader
+        h1#gingerWhaleText.ir The Ginger Whale
+        nav
+          ul
+            li
+              a#whale.ir(href='/') Ginger Whale
+            li
+              a#moreStoriesLink(href='/stories')
+                span.backIcon
+                | More stories
+                span from Ginger Whale
+      article#greebly.storyContent.page
+        header
+          img.icon(src='/images/the-mouse-who-lived-on-the-moon/icon_big.png', alt='The Mouse Who Lived On The Moon')
+          h1 The Mouse Who Lived On The Moon
+          //-a.iStoreLink(href='http://itunes.apple.com/app/sleepy-moles-moving-day/id473172561?ls=1&mt=8')
+            //-img(src='/images/btn_app_store.png', width='128', height='44', alt='Available in the app store')
+        section.description
+          p
+            strong He had everything a mouse could possibly want. Except a friend.
+          p
+            | As everyone knows, the Moon is made of green cheese. And Gizmo is the mouse that owns it. He has everything a mouse could possibly 
+            | want — except a friend. Then one day, a strange machine arrives from the blue planet. Thinking the blue planet is made of blue cheese; 
+            | Gizmo sets off on a mission to retrieve the cheese. But while searching for riches, he ends up finding something even better.
+          p Features:
+          ul
+            li 13 interactive scenes where you can ride a hoverbike, float in zero gravity, drive a toy train, swim in a pool, and more
+            li 29 cartoon-style illustrations
+            li Animation on most pages
+            li Narration by Kathryn Scanlon
+            li A story about a mouse who learns that friendship is more important than money
+            li Three music tracks, including The Blue Danube
+            li Over 25 sound effects to activate
+            li Child-friendly with no external links or in-app purchases
+            li Navigation Menu
+          //-p
+            //-a(href='http://itunes.apple.com/app/sleepy-moles-moving-day/id473172561?ls=1&mt=8', target='_blank') Available now on the App Store
+          footer
+            nav#socialMenu
+              //
+                 FACEBOOK LIKE SETUP 
+              #fb-root
+              script
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              ul
+                //
+                   FACEBOOK LIKE 
+                li.fb
+                  .fb-like(data-href='http://is.gd/fldQ64', data-send='false', data-layout='button_count', data-width='90', data-show-faces='false', data-font='verdana')
+                //
+                   TWEET 
+                li.tweet
+                  a.twitter-share-button(href='https://twitter.com/share', data-url='http://is.gd/fldQ64', data-count='none', data-via='GingerWhaleApps') Tweet
+                  script(type='text/javascript', src='//platform.twitter.com/widgets.js')
+        section.media
+          .videoContainer
+            iframe(width='560', height='315', src='http://www.youtube.com/embed/0qYlZ5nPi74', frameborder='0', allowfullscreen='allowfullscreen')
+          .thumbsList
+            ul
+              li
+                a.lb_storyPics(href='/images/the-mouse-who-lived-on-the-moon/img_1.jpg', title='Sleepy Mole pic 1')
+                  img(src='/images/the-mouse-who-lived-on-the-moon/th_1.png', alt='thumbnail 1')
+              li
+                a.lb_storyPics(href='/images/the-mouse-who-lived-on-the-moon/img_2.jpg', title='Sleepy Mole pic 2')
+                  img(src='/images/the-mouse-who-lived-on-the-moon/th_2.png', alt='thumbnail 2')
+              li
+                a.lb_storyPics(href='/images/the-mouse-who-lived-on-the-moon/img_3.jpg', title='Sleepy Mole pic 3')
+                  img(src='/images/the-mouse-who-lived-on-the-moon/th_3.png', alt='thumbnail 3')
+              li.last
+                a.lb_storyPics(href='/images/the-mouse-who-lived-on-the-moon/img_4.jpg', title='Sleepy Mole pic 4')
+                  img(src='/images/the-mouse-who-lived-on-the-moon/th_4.png', alt='thumbnail 4')
+      footer#storyFooter
